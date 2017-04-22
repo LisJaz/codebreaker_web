@@ -1,4 +1,4 @@
-package codeBreaker
+package main
 var private_code string
 
 func setCode(code string){

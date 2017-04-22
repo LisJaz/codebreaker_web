@@ -1,4 +1,4 @@
-package codeBreaker
+package main
 
 import "testing"
 
