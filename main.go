@@ -17,13 +17,13 @@ func main() {
 	router := gin.Default()
 
 	router.GET("/codebreaker/setup/:number", func(c *gin.Context) {
-		number := c.setCode("number")
-		setSecret(number)
+		number := c.Param("number")
+		setCode(number)
 		c.String(http.StatusOK, "Secret number configured: " + number)
 	})
 
 	router.GET("/codebreaker/guess/:number", func(c *gin.Context) {
-		name := c.setCode("number")
+		name := c.Param("number")
 		result :=puntoFama(name)
 		c.String(http.StatusOK, "Answer: " + result)
 	})
